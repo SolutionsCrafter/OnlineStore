@@ -180,20 +180,19 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="350dp"
                 android:layout_marginTop="17dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/viewPopuler"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
-                    android:id="@+id/progressBar4"
+                    android:id="@+id/progressBarRecommend"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,6 +1,5 @@
 package com.example.e_valtstore.Adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,11 +32,12 @@ class CategoryAdapter(private var categories: List<Category>) : RecyclerView.Ada
         // Toggle title visibility and background color
         if (position == selectedPosition) {
             holder.titleView.visibility = View.VISIBLE
+            holder.imageView.setBackgroundColor(holder.itemView.context.getColor(R.color.purple))
+            holder.titleView.setBackgroundColor(holder.itemView.context.getColor(R.color.purple))
             holder.categoryLayout.setBackgroundResource(R.drawable.category_highlight_bg)
             holder.imageView.setColorFilter(holder.itemView.context.getColor(R.color.white))
-            holder.imageView.setBackgroundColor(holder.itemView.context.getColor(R.color.purple))
             holder.titleView.setTextColor(holder.itemView.context.getColor(R.color.white))
-            holder.titleView.setBackgroundColor(holder.itemView.context.getColor(R.color.purple))
+
         } else {
             holder.titleView.visibility = View.GONE
             holder.imageView.visibility = View.VISIBLE
