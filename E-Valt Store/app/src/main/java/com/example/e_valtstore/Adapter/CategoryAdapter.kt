@@ -51,11 +51,9 @@ class CategoryAdapter(private var categories: List<Category>) : RecyclerView.Ada
 
         // Set click listener
         holder.itemView.setOnClickListener {
-            val previousPosition = selectedPosition
+            val previousSelectedPosition = selectedPosition
             selectedPosition = holder.adapterPosition
-
-            // Refresh both old and new items
-            notifyItemChanged(previousPosition)
+            notifyItemChanged(previousSelectedPosition)
             notifyItemChanged(selectedPosition)
         }
     }
