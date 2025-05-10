@@ -42,7 +42,7 @@ class CategoryAdapter(private var categories: List<Category>) : RecyclerView.Ada
             holder.titleView.visibility = View.GONE
             holder.imageView.visibility = View.VISIBLE
             holder.imageView.setColorFilter(holder.itemView.context.getColor(R.color.black))
-            holder.categoryLayout.setBackgroundResource(R.drawable.gray_bg)
+            holder.categoryLayout.setBackgroundResource(R.drawable.gray_bg2)
             holder.imageView.setBackgroundResource(R.drawable.gray_bg)
         }
 
@@ -51,11 +51,9 @@ class CategoryAdapter(private var categories: List<Category>) : RecyclerView.Ada
 
         // Set click listener
         holder.itemView.setOnClickListener {
-            val previousPosition = selectedPosition
+            val previousSelectedPosition = selectedPosition
             selectedPosition = holder.adapterPosition
-
-            // Refresh both old and new items
-            notifyItemChanged(previousPosition)
+            notifyItemChanged(previousSelectedPosition)
             notifyItemChanged(selectedPosition)
         }
     }

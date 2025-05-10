@@ -5,6 +5,8 @@
     <color name="purple">#6033ba</color>
     <color name="lightGray">#FFFFFFFF</color>
     <color name="categoryLightGray">#A6FFFFFF</color>
+    <color name="categoryLightGrayNew">#BCE3E3E3</color>
+    <color name="categoryLightGrayNew2">#B8ECECEC</color>
     <color name="gray">#919191</color>
     <color name="darkGray">#616161</color>
 </resources>

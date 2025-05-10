@@ -1,5 +1,6 @@
 package com.example.e_valtstore.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.e_valtstore.Activity.DetailsActivity
 import com.example.e_valtstore.DataClass.Items
 import com.example.e_valtstore.R
 
@@ -35,14 +37,26 @@ class RecommendationAdapter(private var items: List<Items>) : RecyclerView.Adapt
         Glide.with(holder.imgPic.context).load(item.picUrl[0]).into(holder.imgPic)
 
         // Set click listener
-        holder.itemView.setOnClickListener {
-            val previousPosition = selectedPosition
-            selectedPosition = holder.adapterPosition
+        if (position == 0){
+            holder.itemView.setOnClickListener {
+                val previousPosition = selectedPosition
+                selectedPosition = holder.adapterPosition
 
-            // Refresh both old and new items
-            notifyItemChanged(previousPosition)
-            notifyItemChanged(selectedPosition)
+                // Refresh both old and new items
+                notifyItemChanged(previousPosition)
+                notifyItemChanged(selectedPosition)
+
+                // Navigate to DetailsActivity with selected item
+                val context = holder.itemView.context
+                val intent = Intent(context, DetailsActivity::class.java).apply {
+                    putExtra("item", item)
+                }
+                context.startActivity(intent)
+            }
+        }else{
+            holder.itemView.setOnClickListener(null)
         }
+
     }
 
 

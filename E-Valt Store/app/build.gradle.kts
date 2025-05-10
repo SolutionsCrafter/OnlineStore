@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.database)
+    implementation(libs.mediation.test.suite)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -55,5 +56,7 @@ dependencies {
     implementation (libs.glide)
     implementation (libs.glide.v4120)
     annotationProcessor (libs.compiler)
+    implementation (libs.circleindicator)
+
 
 }

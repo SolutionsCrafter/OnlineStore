@@ -10,7 +10,7 @@
         android:id="@+id/imgMainPic"
         android:layout_width="164dp"
         android:layout_height="164dp"
-        android:background="@drawable/gray_bg"
+        android:background="@drawable/gray_bg3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
